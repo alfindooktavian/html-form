@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="img/png" href="./html_form/gambar/icon.png" sizes="16x16"/>
+    <title>Pendaftaran Mahasiswa Baru</title>
+</head>
+<body>
+    <div id="header">
+        <h1><center>Politeknik Negeri Madiun</center></h1>
+        <h3><center>Tahun Ajaran 2024/2025</center></h3>
+    </div>
+        <div id="content">
+            <form action="proses.php" method="post">
+                <fieldset>
+                    <legend>Pendaftaran Mahasiswa Baru</legend>
+                    <table width="100%">
+                        <tr>
+                            <td><label for="name">Nama Lengkap: </label></td>
+                            <td width="80%"><input type="text" name="name" id="name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="ttl">Tempat/Tanggal Lahir</label></td>
+                            <td><input for="text" id="ttl" name="ttl"> / 
+                                <input type="number" id="tgl_lahir" name="tgl_lahir" min="1" max="31" placeholder="Tanggal" required>
+                                <input type="number" id="bln_lahir" name="bln_lahir" min="1" max="12" placeholder="Bulan" required>
+                                <input type="number" id="thn_lahir" name="thn_lahir" min="1900" max="2099" placeholder="Tahun" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="agama">Agama:</label></td>
+                            <td>
+                                <select id="agama" name="agama">
+                                    <option value="">--Pilih--</option>
+                                    <option value="Islam">Islam</option>
+                                    <option value="Kristen">Kristen</option>
+                                    <option value="Katolik">Katolik</option>
+                                    <option value="Hindu">Hindu</option>
+                                    <option value="Budha">Budha</option>
+                                    <option value="Konghucu">Konghucu</option>
+                                </select><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="jeniskelamin">Jenis Kelamin:</label></td>
+                                <td style="display: flex;">
+                                    <input type="radio" id="Laki-laki" name="fav_language" value="Laki-laki" required>
+                                    <label for="Laki-laki">Laki-laki</label><br>
+                                    <input type="radio" id="Perempuan" name="fav_language" value="Perempuan" required>
+                                    <label for="Perempuan">Perempuan</label><br>
+                            
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="alamatrumah">Alamat Rumah:</label></td>
+                            <td><textarea id="alamatrumah" name="alamatrumah"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><label for="notelp">No. Telp:</label></td>
+                            <td> <input type="text" id="notelp" name="notelp"></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="namasekolah">Nama Sekolah Asal:</label></td>
+                            <td><input type="text" id="namasekolah" name="namasekolah"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="noijazah">No. Ijazah SMA/MA:</label></td>
+                            <td><input type="text" id="noijazah" name="noijazah"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="foto">Foto (Ukuran File Maks. 20 KB):</label></td>
+                            <td><input type="file" id="foto" name="foto" accept="image/*" capture="camera"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="namaayah">Nama Ayah:</label></td>
+                            <td><input type="text" id="namaayah" name="namaayah"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="namaibu">Nama Ibu:</label></td>
+                            <td><input type="text" id="namaibu" name="namaibu"></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="alamatsekolah">Alamat Sekolah Asal:</label></td>
+                            <td><textarea id="alamatrumah" name="alamatsekolah"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><label for="jurusan">Jurusan Dipilih:</label></td>
+                            <td>
+                                <select id="jurusan" name="jurusan">
+                                    <option value="">--Pilih--</option>
+                                    <option value="Komputerisasi Akutansi">Komputerisasi Akutansi</option>
+                                    <option value="Administrasi Bisnis">Administrasi Bisnis</option>
+                                    <option value="Teknik Komputer Kontrol">Teknik Komputer Kontrol</option>
+                                    <option value="Teknik Listrik">Teknik Listrik</option>
+                                    <option value="Teknik Mesin">Mesin Otomotif</option>
+                                    <option value="Perkeretaapian">Perkeretaapian</option>
+                                    <option value="Teknologi Informasi">Teknologi Informasi</option>
+                                    <option value="Akutansi">Akutansi</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="sumberinfo">Tahu informasi ini dari :</label></td>
+                            <td style="display: flex;">
+                                    <input type="radio" id="koran" name="fav_language" value="koran" required>
+                                    <label for="koran">Koran</label><br>
+                                    <input type="radio" id="web" name="fav_language" value="web" required>
+                                    <label for="web">Website</label><br>
+                                    <input type="radio" id="tv" name="fav_language" value="tv" required>
+                                    <label for="tv">Televisi</label>
+                                    <input type="radio" id="rad" name="fav_language" value="rad" required>
+                                    <label for="rad">Radio</label>
+                                    <input type="radio" id="teman" name="fav_language" value="teman" required>
+                                    <label for="teman">Teman</label>
+                            </td>
+                        </tr>
+                    </table><br>
+                    <table width="100%">
+                        <tr>
+                            <td width="50%" align="right"><input type="submit" value="DAFTAR"></td>
+                            <td width="50%" ><input type="reset" value="BATAL"></td>
+                        </tr>
+                    </table>
+                </fieldset>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
